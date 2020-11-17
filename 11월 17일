@@ -1,0 +1,125 @@
+----------------------------------------------------- link.html
+
+* 파일 링크
+
+    <!-- 
+      # 페이지 링크를 걸려면 a태그를 사용합니다.
+      다른 웹페이지를 사용하거나 웹 페이지 내부의 특정 위치로 이동할 때
+      사용합니다. 
+      # a태그의 내부속성 href를 사용하여 연결할 페이지의 주소를 적습니다.
+     -->
+
+     <a href="https://www.naver.com"> 네이버로 이동하기!</a>;
+
+     <hr> <!-- 줄 개행과 동시에 구분선을 만들어 주는 태그 -->
+     <a href="basic.html">basic.html로 이동하기	</a>
+
+     <hr>
+     <!-- 
+      # 페이지 내부에 이미지를 삽입하고 싶다면 img태그를 사용합니다.
+      img태그의 내부속성 src에 이미지 파일의 경로를 저장하게 됩니다. 
+
+      -->
+     <!-- 
+      열린 태그와 닫힌 태그 사이에 포함되어있는 태그나 텍스트가 없다면
+      닫는 태그를 생략하고 끝부분을 /로 마감할 수 있다.
+       -->
+
+     <img alt="삼색이1" src="img/삼색이1.jpg" width ="300" />
+     <hr>
+     <a href = "http://www.daum.net">
+     <img alt="삼색이2" src="삼색이2.jpg"width ="300"/>
+      </a>
+    
+ --------------------------------------------------------- input_form.html
+ 
+ * html 기초 부분
+ 
+   <h1>회원 가입 양식</h1>
+    <hr>
+    <!-- form태그는 입력 양식의 시작과 끝을 표시합니다. -->
+    <!-- input태그는 입력창을 만드는 태그입니다.
+      type속성으로 여러가지 입력창을 제공할 수 있습니다.
+     -->
+    <form action="basic.html"> <!-- action에는 사용자의 입력값(데이터)을 처리하는 로직이 있는 페이지로 전송. -->
+      # 아이디 : <input type ="text" name ="id"> <br>
+      # 비밀번호 : <input type = "password" name="pw"> <br>
+
+      # 성별 <br>
+      <!-- radio 타입은 동그라미 체크 버튼을 만듭니다.(다중선택지에 단일선택버튼) -->
+      <input type="radio" name="gender" value ="male">남 &nbsp;&nbsp;&nbsp;
+      <input type="radio" name="gender" value ="female">여
+
+      # 취미 <br>
+      <!-- checkbox타입은 네모 체크박스 버튼을 만듭니다.다중선택지에 다중선택버튼 -->
+      <input type="checkbox" name="hobby" value ="독서"> 독서 &nbsp;
+      <input type="checkbox" name="hobby" value ="수면"> 축구 &nbsp;
+      <input type="checkbox" name="hobby" value ="축구"> 게임 &nbsp;
+      <input type="checkbox" name="hobby" value ="게임"> 수면 &nbsp;
+      <br>
+
+      # 지역 <br>
+      <select name = "region">	<!-- 선택양식을 제공 option 태그에 선택지를 지정.-->
+      <option value = "seoul">서울</option>
+      <option value = "busan">부산</option>
+      <option selected = "selected" value = "daegu">대구</option>
+      <option value = "ulsan">울산</option>
+      </select> <br>
+
+      <!-- textarea: 텍스트 작성 공간 영역 제공. cols 너비, row는 높이 -->
+      # 자기소개 <br>
+      <textarea name="introduce" rows="10" cols="40">자기소개를 입력하세요</textarea><br>
+
+      <!-- submit은 form태그의 action에 작성한 경로로 폼 데이터 양식을 전달합니다.
+        value에는 버튼에 들어갈 텍스트를 작성.
+       -->
+      <input type = "submit" value="회원가입">
+      <input type = "reset" value ="초기화">
+
+    </form>
+------------------------------------------------------ table.html
+ 
+ * 테이블 작성법
+ 
+   <!-- table 태그는 표를 작성하는 태그입니다. -->
+    <table border="1"> <!-- table의 자식태그 tr은 표의 행을 나타냅니다. -->
+      <tr>
+      <!-- tr의 자식태그 td는 한 행에 들어갈 열(칸)들을 나타냅니다. -->
+        <th>이름</th> 
+        <th>나이</th> 
+        <th>성별</th> 
+        <th>주소</th>
+        <td rowspan = "4" align ="center">[세로버튼]</td>
+      </tr>
+      <tr>
+        <td>홍길동</td>
+        <td>30</td>
+        <td>남자</td>
+        <td>서울</td>
+      </tr>
+      <tr>
+        <td>김철수</td>
+        <td>20</td>
+        <td>여자</td>
+        <td>부산</td>
+      </tr>
+      <tr>
+        <td colspan = "4" align ="center">[버튼입니다]</td>
+      </tr>
+
+    </table>
+---------------------------------------------------------- scriptlet.jsp
+
+* jsp 기초 태그
+
+<% for(int i=1 ;i<=5;i++){%>
+	<h2>이클립스 내부에서 jsp 문서 작성하기!</h2>
+	<p> <!-- p태그는 문단을 구성해 주는 태그입니다. -->
+		안녕하세요! 오늘은 2020년 11월 17일 화요일입니다. <br>
+		지금은 jsp문서를 작성중이에요!
+	</p>
+	<% } %>
+  
+  
+  
+  
